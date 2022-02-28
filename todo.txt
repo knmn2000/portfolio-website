@@ -1,0 +1,8 @@
+Change sara text 
+change intro stuff - home2 - done
+change about - done
+change projects
+Change color to blueish
+add two more routes
+ - guitar
+ - graphics
