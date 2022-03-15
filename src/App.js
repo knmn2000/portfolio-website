@@ -38,6 +38,7 @@ function App() {
           <Route path='/guitar' component={Guitar} />
           <Route path='/graphics' component={Resume} />
           <Route path='/resume' component={Resume} />
+          <Route path='*' exact={true} component={Home} />
         </Switch>
         <Footer />
       </div>
