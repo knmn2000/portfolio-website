@@ -9,10 +9,10 @@ import Experience from './Experience';
 
 function About() {
   return (
-    <Container fluid className='about-section'>
+    <Container fluid className='about-section' style={{paddingLeft: 0, paddingRight: 0}}>
       <Particle />
       <Container>
-        <Row style={{ justifyContent: 'center', padding: '10px' }}>
+        <Row style={{ justifyContent: 'center', padding: '0px' }}>
           <Col
             md={7}
             style={{

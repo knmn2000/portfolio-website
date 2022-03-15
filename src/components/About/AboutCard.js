@@ -16,7 +16,7 @@ function AboutCard() {
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
-          <ul>
+          <ul style={{paddingLeft : '15px'}}>
             <li className='about-activity'>
               <ImPointRight /> Playing Fingerstyle Guitar
             </li>

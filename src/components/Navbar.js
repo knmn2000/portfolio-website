@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import logo from '../Assets/logo.png';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineHome,
-  AiOutlineFormatPainter,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from 'react-icons/ai';
 import { FaGuitar } from 'react-icons/fa';
-import { BsXDiamond } from 'react-icons/bs';
 
 import { CgFileDocument } from 'react-icons/cg';
 
 function NavBar() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -56,13 +66,13 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='ml-auto' defaultActiveKey='#home'>
-            <Nav.Item>
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link as={Link} to='/' onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: '2px' }} /> Home
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link
                 as={Link}
                 to='/about'
@@ -72,7 +82,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link
                 as={Link}
                 to='/guitar'
@@ -82,7 +92,8 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
+            {/* 
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link
                 as={Link}
                 to='/project'
@@ -92,7 +103,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item> */}
 
-            <Nav.Item>
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link
                 as={Link}
                 to='/project'
@@ -104,7 +115,7 @@ function NavBar() {
                 Projects
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item style={isMobile ? { marginLeft: '0px' } : {}}>
               <Nav.Link
                 as={Link}
                 to='/resume'

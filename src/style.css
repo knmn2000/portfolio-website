@@ -752,3 +752,18 @@ html {
 .fork-btn-inner::after {
     display: none !important;
 }
+
+@media only screen and (max-width: 768px){
+    .home-content {
+        padding: 1rem 0 2rem !important;
+        color: whitesmoke;
+        text-align: left;
+    }
+    .about-section {
+        position: relative !important;
+        padding-top: 100px !important;
+        padding-bottom: 30px !important;
+        background-image: var(--section-background-color) !important;
+        color: white !important;
+    }
+}

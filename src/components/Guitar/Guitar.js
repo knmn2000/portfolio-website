@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Particle from '../Particle';
-import InstagramEmbed from 'react-instagram-embed';
-import { IFrame } from './Iframe';
 // " src="/embed" frameborder="0"></iframe>`;
 const videoLinks = [
   'https://www.instagram.com/reel/CX9DfgSqnL3',
