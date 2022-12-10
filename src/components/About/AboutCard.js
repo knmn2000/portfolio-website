@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: 'justify' }}>
             Hi Folks, I am <span className='purple'>Karan Mannan </span>
             from <span className='purple'> Haryana, India.</span>
-            <br />I am a Computer Science Undergrad from Manipal Univesity
+            <br />I am a Computer Science Undergrad from Manipal University
             Jaipur
             <br />
             <br />
