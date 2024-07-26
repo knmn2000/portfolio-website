@@ -9,7 +9,7 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
-  'https://raw.githubusercontent.com/knmn2000/resume/62ca47a33a35d43ac64d280011ff688ec8f59249/KARAN_MANNAN_RESUME-FEB22.pdf';
+  'https://github.com/user-attachments/files/16389628/karan_mannan_resume_2024.pdf';
 
 function Resume() {
   const [width, setWidth] = useState(1200);
